@@ -16,21 +16,6 @@ if path == '':
 
 files = os.listdir(path)                     # this will list the files within the target directory
 
-# this creates the directory if it doesnt exists
-while not os.path.isdir(os.path.join(path, 'images')) or not os.path.isdir(os.path.join(path, 'documents')) or not os.path.isdir(os.path.join(path, 'medias')) or not os.path.isdir(os.path.join(path, 'random')):
-    if not os.path.isdir(os.path.join(path, 'images')):
-        print("Made Img")
-        os.makedirs(os.path.join(path, 'images'))
-    elif not os.path.isdir(os.path.join(path, 'documents')):
-        print("Made Doc")
-        os.makedirs(os.path.join(path, 'documents'))
-    elif not os.path.isdir(os.path.join(path, 'medias')):
-        print("Made Med")
-        os.makedirs(os.path.join(path, 'medias'))
-    else:
-        print("made Ran")
-        os.makedirs(os.path.join(path, 'random'))
-
 # for each file in the directory
 for file in files:
     # this creates the complete file path for each file in the directory
