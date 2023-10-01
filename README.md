@@ -15,3 +15,4 @@ A simple file sorter.
 - [ ] Setting/config feature
 - [ ] Add more file types
 - [ ] Error handling
+- [ ] Set default folder path
