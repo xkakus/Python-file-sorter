@@ -28,15 +28,16 @@ for file in files:
         ext = ext[1:]
 
         # this compares the extension, if matched, then assign the variable destination to the target path
-        if ext in ["gif", "jpg", "png", "jpeg", "bmp", "tif", "tiff"]:
-            destination = os.path.join(path, 'images')
-        elif ext in ['doc', 'docx', 'xls', 'xlsx', 'pdf', 'txt', 'ai', 'svg', 'eps', 'idml', 'indd', 'pptx', 'ppt', 'xopp']:
-            destination = os.path.join(path, 'documents')
-        elif ext in ['prproj', 'mp4', 'mov', 'avi', 'aep', 'aepx', 'sesx', 'wav', 'mp3', 'flac']:
-            destination = os.path.join(path, 'medias')
-        else:
-            destination = os.path.join(path, 'random', ext)
-
+        match ext:
+            case ["gif", "jpg", "png", "jpeg", "bmp", "tif", "tiff"]:
+                destination = os.path.join(path, 'images')
+            case ['doc', 'docx', 'xls', 'xlsx', 'pdf', 'txt', 'ai', 'svg', 'eps', 'idml', 'indd', 'pptx', 'ppt', 'xopp']:
+                destination = os.path.join(path, 'documents')
+            case ['prproj', 'mp4', 'mov', 'avi', 'aep', 'aepx', 'sesx', 'wav', 'mp3', 'flac']:
+                destination = os.path.join(path, 'medias')
+            case _:
+                destination = os.path.join(path, 'random', ext)
+                
         # if the directory doesnt exists, then make it
         if not os.path.exists(destination):
             os.makedirs(destination)
