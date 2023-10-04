@@ -1,9 +1,9 @@
 # Python-file-sorter
 A simple file sorter.
 
-## **Version 2.1 Update**
+## **Version 2.2 Update**
 
-- Added feature where files are sorted into subject folders, then sorted by file extension
+- Modified get_info() to move file with any of the subject in the name
 
 ## **WIP Features**
 
