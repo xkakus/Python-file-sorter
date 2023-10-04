@@ -1,3 +1,4 @@
+#!/usr/bin/env python
 import os, shutil, re
 
 def rename_if_exists(destination, extension, filename):
@@ -10,7 +11,6 @@ def rename_if_exists(destination, extension, filename):
             return new_path
         i += 1
 
-# Function to get info from file
 def get_info(fileName):
     fileName = fileName.split(r'_')
     fileName[1] = fileName[1].lower()
