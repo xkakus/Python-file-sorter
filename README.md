@@ -1,9 +1,9 @@
 # Python-file-sorter
 A simple file sorter.
 
-## **Version 2.0 Update**
+## **Version 2.1 Update**
 
-- Added feature where files are sorted into sub folders based on file extension
+- Added feature where files are sorted into subject folders, then sorted by file extension
 
 ## **WIP Features**
 
