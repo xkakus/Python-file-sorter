@@ -13,15 +13,31 @@ def rename_if_exists(destination, extension, filename):
 
 def get_info(fileName):
     fileName = fileName.split(r'_')
-    fileName[1] = fileName[1].lower()
-    if fileName[1] in ['acct', 'econ', 'mis', 'stat']:
-        return fileName[1]
-    else:
-        return None
+    i = 0
+    while i < len(fileName):
+        fileName[i] = fileName[i].lower()
+        if not fileName[i] in ['acct', 'econ', 'mis', 'stat']:
+            i =+ 1
+        elif fileName[i] in ['acct', 'econ', 'mis', 'stat']:
+            return fileName[i]
+        else:
+            return None
+
+        # if fileName[i] in ['acct', 'econ', 'mis', 'stat']:
+        #     return fileName[i]
+        # else:
+        #     return None
+    
+
+    # fileName[1] = fileName[1].lower()
+    # if fileName[1] in ['acct', 'econ', 'mis', 'stat']:
+    #     return fileName[1]
+    # else:
+    #     return None
 
 path = input('What is the target folder: ')
 if path == '':
-    path = '/home/xkaku/Desktop/test'
+    path = 'C:/Users/yuxua/Desktop/test'
 
 files = os.listdir(path)
 
