@@ -23,17 +23,7 @@ def get_info(fileName):
         else:
             return None
 
-        # if fileName[i] in ['acct', 'econ', 'mis', 'stat']:
-        #     return fileName[i]
-        # else:
-        #     return None
     
-
-    # fileName[1] = fileName[1].lower()
-    # if fileName[1] in ['acct', 'econ', 'mis', 'stat']:
-    #     return fileName[1]
-    # else:
-    #     return None
 
 path = input('What is the target folder: ')
 if path == '':
