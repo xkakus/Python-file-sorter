@@ -1,9 +1,9 @@
 # Python-file-sorter
 A simple file sorter.
 
-## **Version 2.2 Update**
+## **Version 2.3 Update**
 
-- Modified get_info() to move file with any of the subject in the name
+- Updates path to automatically create a folder in the Desktop
 
 ## **WIP Features**
 
