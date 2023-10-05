@@ -24,8 +24,13 @@ def get_info(fileName):
     return None
 
 path = input('What is the target folder: ')
+home_dir = os.path.expanduser("~")
 if path == '':
-    path = '/home/xkaku/Desktop/test/'
+    path = os.path.join(home_dir, 'Desktop', 'sort')
+    if not os.path.exists(path):
+        os.makedirs(path)
+        print(f'made {path}')
+
 
 files = os.listdir(path)
 
