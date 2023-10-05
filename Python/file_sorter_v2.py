@@ -1,12 +1,16 @@
 #!/usr/bin/env python
 import os, shutil, re
 
-def rename_if_exists(destination, extension, filename):
+def rename_if_exists(destination, extension, filename, subject=None):
     base, ext = os.path.splitext(filename)
     i = 1
     while True:
         new_filename = f"{base} ({i}){ext}"
-        new_path = os.path.join(destination, extension, new_filename)
+        if subject == None:
+            new_path = os.path.join(destination, extension, new_filename)
+        else:
+            new_path = os.path.join(destination, subject, extension, new_filename)
+
         if not os.path.exists(new_path):
             return new_path
         i += 1
@@ -17,7 +21,7 @@ def get_info(fileName):
     for subject in subjects:
         if re.search(subject, fileName, re.IGNORECASE):
             return subject
-        return None
+    return None
 
 path = input('What is the target folder: ')
 if path == '':
@@ -58,7 +62,7 @@ for file in files:
                 os.makedirs(os.path.join(destination, subject, ext))
             new_path = os.path.join(destination, subject, ext, file)
             if os.path.exists(new_path):
-                new_path = rename_if_exists(destination, subject, ext, file)
+                new_path = rename_if_exists(destination, ext, file, subject)
 
         shutil.move(file_path, new_path)
     else:
