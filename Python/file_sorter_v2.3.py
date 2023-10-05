@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-import os, shutil, re
+import os, shutil, re, json
 
 def rename_if_exists(destination, extension, filename, subject=None):
     base, ext = os.path.splitext(filename)
