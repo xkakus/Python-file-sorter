@@ -2,5 +2,12 @@
     "setting": {
         "default-path": "",
         "secondary-path": ""
+    },
+    "subject": ["acct", "econ", "mis", "stat", "macro"],
+    "extension": {
+        "images": ["gif", "jpg", "png", "jpeg", "bmp", "tif", "tiff"],
+        "documents": ["doc", "docx", "xls", "xlsx", "pdf", "txt", "ai", "svg", "eps", "idml", "indd", "pptx", "ppt", "xopp"],
+        "medias": ["prproj", "mp4", "mov", "avi", "aep", "aepx", "sesx", "wav", "mp3", "flac"],
+        "code": ["py", "html", "css", "js", "json"]
     }
 }

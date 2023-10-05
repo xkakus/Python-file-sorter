@@ -16,8 +16,7 @@ def rename_if_exists(destination, extension, filename, subject=None):
         i += 1
 
 def get_info(fileName):
-    subjects = ['acct', 'econ', 'mis', 'stat']
-    
+    subjects = ['acct', 'econ', 'mis', 'stat', 'macro']
     for subject in subjects:
         if re.search(subject, fileName, re.IGNORECASE):
             return subject
