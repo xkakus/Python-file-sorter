@@ -19,22 +19,6 @@ def get_info(fileName):
             return subject
         return None
 
-    # fileName = fileName.split(r'_')
-    # i = 0
-    
-    # while i < len(fileName):
-    #     fileName[i] = fileName[i].lower()
-    #     if not fileName[i] in ['acct', 'econ', 'mis', 'stat']:
-    #         i =+ 1
-    #         if i == len(fileName):
-    #             return None
-    #     elif fileName[i] in ['acct', 'econ', 'mis', 'stat']:
-    #         return fileName[i]
-    #     # else:
-    #     #     return None
-
-    
-
 path = input('What is the target folder: ')
 if path == '':
     path = '/home/xkaku/Desktop/test/'
