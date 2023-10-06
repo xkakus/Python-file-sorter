@@ -18,7 +18,8 @@ A simple file sorter.
 
 ## **How to use**
 ### **Linux**
-    Change ~/Desktop to the file location of the script
+Change ~/Desktop to the file location of the script
+
     cd ~/Desktop && chmod +x file_sorter_v2.3.py
     nano ~/.bashrc
     alias sort='cd ~/Desktop && ./file_sorter_v2.py'
