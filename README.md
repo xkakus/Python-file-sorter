@@ -2,9 +2,9 @@
 A simple file sorter.
 
 ---
-## **Version 2.3 Update**
+## **Version 2.4 Update**
 
-- Updates path to automatically create a folder in the Desktop
+- Added alias for extensions
 ---
 ## **WIP Features**
 
