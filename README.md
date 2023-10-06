@@ -4,7 +4,7 @@ A simple file sorter.
 ---
 ## **Version 2.5 Update**
 
-- Updated if statment
+- Updated if statmentg
 ---
 ## **WIP Features**
 
