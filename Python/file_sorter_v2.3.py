@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-import os, shutil, re
+import os, shutil, re, json
 
 def rename_if_exists(destination, extension, filename, subject=None):
     base, ext = os.path.splitext(filename)
@@ -16,10 +16,20 @@ def rename_if_exists(destination, extension, filename, subject=None):
         i += 1
 
 def get_info(fileName):
-    subjects = ['acct', 'econ', 'mis', 'stat', 'macro']
+    # subjects = ['acct', 'econ', 'mis', 'stat', 'macro']
+    subjects = {
+        "acct":["accounting"],
+        "econ":["micro", "macro"],
+        "mis":["management information system", "information system"],
+        "stat":["statistic", "Quantitative Methods"]
+        }
     for subject in subjects:
         if re.search(subject, fileName, re.IGNORECASE):
             return subject
+    for subject, aliases in subjects.items():
+        for alias in aliases:
+            if re.search(alias, fileName, re.IGNORECASE):
+                return subject
     return None
 
 path = input('What is the target folder: ')
