@@ -1,11 +1,9 @@
 # Python-file-sorter
 A simple file sorter.
 
----
 ## **Version 2.4 Update**
 
 - Added alias for extensions
----
 ## **WIP Features**
 
 - [ ] Add file creation date to the file name
@@ -18,7 +16,6 @@ A simple file sorter.
 - [ ] Error handling
 - [ ] Set default folder path
 
----
 ## **How to use**
 ### **Linux**
     Change ~/Desktop to the file location of the script
