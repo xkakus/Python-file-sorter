@@ -1,10 +1,10 @@
 # Python file sorter
 A simple file sorter.
 
----
 ## **Version 2.4 Update**
 
 - Updated if statment
+
 ## **WIP Features**
 
 - [ ] Add file creation date to the file name
