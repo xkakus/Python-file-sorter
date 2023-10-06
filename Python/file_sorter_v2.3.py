@@ -50,16 +50,18 @@ for file in files:
         fileName, ext = os.path.splitext(file)
         ext = ext[1:]
 
-        if ext in ["gif", "jpg", "png", "jpeg", "bmp", "tif", "tiff"]:
-            destination = os.path.join(path, 'images')
-        elif ext in ['doc', 'docx', 'xls', 'xlsx', 'pdf', 'txt', 'ai', 'svg', 'eps', 'idml', 'indd', 'pptx', 'ppt', 'xopp']:
-            destination = os.path.join(path, 'documents')
-        elif ext in ['prproj', 'mp4', 'mov', 'avi', 'aep', 'aepx', 'sesx', 'wav', 'mp3', 'flac']:
-            destination = os.path.join(path, 'medias')
-        elif ext in ['py', 'html', 'css', 'js', 'json']:
-            destination = os.path.join(path, 'code')
-        else:
-            destination = os.path.join(path, 'random', ext)
+        extension_map = {
+            "images": ["gif", "jpg", "png", "jpeg", "bmp", "tif", "tiff"],
+            "documents": ['doc', 'docx', 'xls', 'xlsx', 'pdf', 'txt', 'ai', 'svg', 'eps', 'idml', 'indd', 'pptx', 'ppt', 'xopp'],
+            "medias": ['prproj', 'mp4', 'mov', 'avi', 'aep', 'aepx', 'sesx', 'wav', 'mp3', 'flac'],
+            "code": ['py', 'html', 'css', 'js', 'json']
+        }
+
+        for folder, aliases in extension_map.items():
+            for alias in aliases:
+                if ext == alias:
+                    destination = os.path.join(path, folder)
+                    print(destination)
                 
         if not os.path.exists(destination):
             os.makedirs(destination)
