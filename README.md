@@ -1,4 +1,4 @@
-# Python-file-sorter
+# Python file sorter
 A simple file sorter.
 
 ## **Version 2.4 Update**
