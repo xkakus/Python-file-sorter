@@ -54,7 +54,7 @@ for file in files:
             "images": ["gif", "jpg", "png", "jpeg", "bmp", "tif", "tiff"],
             "documents": ['doc', 'docx', 'xls', 'xlsx', 'pdf', 'txt', 'ai', 'svg', 'eps', 'idml', 'indd', 'pptx', 'ppt', 'xopp'],
             "medias": ['prproj', 'mp4', 'mov', 'avi', 'aep', 'aepx', 'sesx', 'wav', 'mp3', 'flac'],
-            "code": ['py', 'html', 'css', 'js', 'json']
+            "code": ['py', 'html', 'css', 'js', 'json', 'ipynb']
         }
 
         for folder, aliases in extension_map.items():
